@@ -8,12 +8,12 @@ var twoSum = function(nums, target) {
     let map = {};
     // loop through nums
     for (let i = 0; i < nums.length; i++) {
-        // create a variable to store value of target - nums[i]
+        // create a temp variable to check value of target - nums[i]
         let possible = target - nums[i];
-        // check map to see if variable value exist
-        // if not then store key as nums[i] and value as i
+        // check map properties if temp value exist
+        // if not then store property as nums[i] and value as i
         if (map[possible] === undefined) map[nums[i]] = i;
-        // if it does then return i and map[variable value]
+        // if exist then return both indexes
         else return [i, map[possible]];
     }
 };
