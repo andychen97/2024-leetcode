@@ -3,7 +3,6 @@
  * @return {number}
  */
 var lengthOfLastWord = function(s) {
-    let removeSpace = s.split(' ');
-    removeSpace = removeSpace.filter(Boolean);
+    let removeSpace = s.trim().split(' ');
     return removeSpace[removeSpace.length - 1].length;
 };
